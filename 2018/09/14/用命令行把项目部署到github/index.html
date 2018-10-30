@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>用命令行把项目部署到github | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.项目首次提交到github上a)    打开项目所在文件位置，右击点击Git Bash Here.b)    $git init         //初始化c)    $git commit –m ‘第一次提交’    //提交，并注释信息“第一次提交”d)    $git remote add origin git@github.com:{github用户名}/{repository名}.g">
+<meta name="keywords" content="用命令行把项目部署到github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用命令行把项目部署到github">
+<meta property="og:url" content="http://yoursite.com/2018/09/14/用命令行把项目部署到github/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.项目首次提交到github上a)    打开项目所在文件位置，右击点击Git Bash Here.b)    $git init         //初始化c)    $git commit –m ‘第一次提交’    //提交，并注释信息“第一次提交”d)    $git remote add origin git@github.com:{github用户名}/{repository名}.g">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-29T06:57:28.422Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用命令行把项目部署到github">
+<meta name="twitter:description" content="1.项目首次提交到github上a)    打开项目所在文件位置，右击点击Git Bash Here.b)    $git init         //初始化c)    $git commit –m ‘第一次提交’    //提交，并注释信息“第一次提交”d)    $git remote add origin git@github.com:{github用户名}/{repository名}.g">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-用命令行把项目部署到github" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/09/14/用命令行把项目部署到github/" class="article-date">
+  <time datetime="2018-09-14T09:01:54.000Z" itemprop="datePublished">2018-09-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      用命令行把项目部署到github
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-项目首次提交到github上"><a href="#1-项目首次提交到github上" class="headerlink" title="1.项目首次提交到github上"></a>1.项目首次提交到github上</h2><p>a)    打开项目所在文件位置，右击点击Git Bash Here.<br>b)    $git init         //初始化<br>c)    $git commit –m ‘第一次提交’    //提交，并注释信息“第一次提交”<br>d)    $git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:{github用户名}/{repository名}.git    //链接远程github项目<br>e)    $git push –u origin master     //将本地项目提交到GitHub项目上去</p>
+<h2 id="2-删除GitHub上的文件"><a href="#2-删除GitHub上的文件" class="headerlink" title="2.删除GitHub上的文件"></a>2.删除GitHub上的文件</h2><p>a)    打开项目所在的文件位置，右击点击git bash here<br>b)    $git pull origin master     //将远程仓库上的项目拉取下来<br>c)    $dir         //查看有哪些文件夹<br>d)    $git rm –r –cached 文件名        //删除某文件<br>e)    $git commit –m ‘删除说明’        //提交，添加说明<br>f)    $git push –u origin master         //将本次更改提交到GitHub项目上去<br>注意：<br>本地项目中的文件不会被删除，不会影响本地文件操作。删除的只是远程仓库中的文件。<br>每次增加文件或删除文件，都要commit然后直接git push –u origin master,就可以同步到GitHub上了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/09/14/用命令行把项目部署到github/" data-id="cjnv236jm000efwhxny9c8lx7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用命令行把项目部署到github/">用命令行把项目部署到github</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/09/14/服务器restart-sh脚本中的含义/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          服务器restart.sh脚本中的含义
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/09/14/pageHelper-分页应用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">pageHelper 分页应用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/RESTful-API/">RESTful API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idea/">idea</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pageHelper-分页应用/">pageHelper 分页应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器restart-sh脚本中的含义/">服务器restart.sh脚本中的含义</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/用命令行把项目部署到github/">用命令行把项目部署到github</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/RESTful-API/" style="font-size: 10px;">RESTful API</a> <a href="/tags/idea/" style="font-size: 10px;">idea</a> <a href="/tags/pageHelper-分页应用/" style="font-size: 10px;">pageHelper 分页应用</a> <a href="/tags/服务器restart-sh脚本中的含义/" style="font-size: 10px;">服务器restart.sh脚本中的含义</a> <a href="/tags/用命令行把项目部署到github/" style="font-size: 10px;">用命令行把项目部署到github</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/10/23/本地IDEA调试远程服务器程序/">本地IDEA调试远程服务器程序</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/23/本地Eclipse调试远程服务器程序/">本地Eclipse调试远程服务器程序</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/23/Sql中and、or、union、union-all-的用法/">Sql中and、or、union、union all 的用法</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/22/Nginx-转发-域名配置/">Nginx 转发 + 域名配置</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/16/inert-into-select语句使用/">inert-into-select语句使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
