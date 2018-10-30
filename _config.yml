@@ -73,7 +73,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landfarz
+##theme: landfarz
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,5 +82,5 @@ deploy:
   type: git
   repo: 
     github: git@github.com:wanghuanghuang/wanghuanghuang.github.io.git
-    coding: https://git.coding.net/whuanghuang/whuanghuang.coding.me.git
+    coding: git@git.coding.net:whuanghuang/whuanghuang.coding.me.git
   branch: master
