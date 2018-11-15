@@ -7,17 +7,16 @@
   
   <title>附件上传 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##配置文件配置上传大小参数12345#修改上传文件大小设置，全局有效spring.http.multipart.maxFileSize=5Mbspring.http.multipart.maxRequestSize=5Mb#附件保存文件夹fileDir=E:/guizi ##controller123456789101112131415161718192021222324//上传附件文件类型白名">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="附件上传">
 <meta property="og:url" content="http://yoursite.com/2018/11/15/附件上传/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="##配置文件配置上传大小参数12345#修改上传文件大小设置，全局有效spring.http.multipart.maxFileSize=5Mbspring.http.multipart.maxRequestSize=5Mb#附件保存文件夹fileDir=E:/guizi ##controller123456789101112131415161718192021222324//上传附件文件类型白名">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-15T07:06:44.073Z">
+<meta property="og:image" content="http://yoursite.com/images/页面图片/18.jpg">
+<meta property="og:updated_time" content="2018-11-15T09:11:49.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="附件上传">
-<meta name="twitter:description" content="##配置文件配置上传大小参数12345#修改上传文件大小设置，全局有效spring.http.multipart.maxFileSize=5Mbspring.http.multipart.maxRequestSize=5Mb#附件保存文件夹fileDir=E:/guizi ##controller123456789101112131415161718192021222324//上传附件文件类型白名">
+<meta name="twitter:image" content="http://yoursite.com/images/页面图片/18.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -86,14 +85,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##配置文件配置上传大小参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#修改上传文件大小设置，全局有效</span><br><span class="line">spring.http.multipart.maxFileSize=5Mb</span><br><span class="line">spring.http.multipart.maxRequestSize=5Mb</span><br><span class="line">#附件保存文件夹</span><br><span class="line">fileDir=E:/guizi</span><br></pre></td></tr></table></figure></p>
+        <p><img src="/images/页面图片/18.jpg" alt="猫咪老师"><br><a id="more"></a></p>
+<p>##配置文件配置上传大小参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#修改上传文件大小设置，全局有效</span><br><span class="line">spring.http.multipart.maxFileSize=5Mb</span><br><span class="line">spring.http.multipart.maxRequestSize=5Mb</span><br><span class="line">#附件保存文件夹</span><br><span class="line">fileDir=E:/guizi</span><br></pre></td></tr></table></figure></p>
 <p>##controller<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//上传附件文件类型白名单</span><br><span class="line">private final String[] FILE_WHITE = &#123;&quot;.zip,&quot;, &quot;.xls&quot;, &quot;.doc&quot;, &quot;.jpeg&quot;, &quot;.jpg&quot;, &quot;.png&quot;, &quot;.pdf&quot;, &quot;.docx&quot;, &quot;.xlsx&quot;&#125;;</span><br><span class="line">@AccessLogger(value = &quot;上传附件&quot;)</span><br><span class="line">@RequestMapping(value = &quot;/upload/save&quot;, method = RequestMethod.POST)</span><br><span class="line">@ApiOperation(value = &quot;上传附件&quot;, httpMethod = &quot;POST&quot;,</span><br><span class="line">        response = ResponseMessage.class, notes = &quot;上传附件&quot;)</span><br><span class="line">public ResponseMessage uploadFile(@RequestParam(value = &quot;file&quot;)  MultipartFile file,</span><br><span class="line">                                      @RequestParam(value = &quot;fileName&quot;) String fileName) &#123;</span><br><span class="line">    if (StringUtils.isEmpty(fileName)) &#123;</span><br><span class="line">            throw new BusinessException(&quot;文件名不能为空&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">    LOG.debug(&quot;文件名&quot; + fileName);</span><br><span class="line">    final String fileType = fileName.substring(fileName.lastIndexOf(&quot;.&quot;));</span><br><span class="line">    final List&lt;String&gt; list = Arrays.asList(FILE_WHITE);</span><br><span class="line">    if (file.isEmpty() || file.getSize() == 0) &#123;</span><br><span class="line">            throw new BusinessException(&quot;文件不能为空&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    if (!list.contains(fileType)) &#123;</span><br><span class="line">            throw new BusinessException(&quot;文件类型不在允许的范围内&quot;);</span><br><span class="line">     &#125;</span><br><span class="line">    final List&lt;Integer&gt; fileIds = new ArrayList&lt;&gt;(1);</span><br><span class="line">    fileIds.add(certificateService.fileSave(file, fileName));</span><br><span class="line">    return ResponseMessage.ok(fileIds.get(0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>##service<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">@Value(&quot;$&#123;fileDir&#125;&quot;)</span><br><span class="line">private String fileDir;</span><br><span class="line">public Integer fileSave(MultipartFile file, String fileName) &#123;</span><br><span class="line">     try &#123;</span><br><span class="line">     //保存文件信息到数据库表</span><br><span class="line">        final RfidFile rfidFile = new RfidFile();</span><br><span class="line">        rfidFile.setFilename(fileName);</span><br><span class="line">        rfidFileMapper.insertSelective(rfidFile);</span><br><span class="line">        final byte[] bytes = file.getBytes();</span><br><span class="line">        final String fileType = fileName.substring(fileName.lastIndexOf(&quot;.&quot;));</span><br><span class="line">        final Path path = Paths.get(fileDir + File.separator + rfidFile.getId() + fileType);</span><br><span class="line">        LOG.debug(&quot;文件路径：&quot; + path.toString());</span><br><span class="line">        Files.write(path, bytes);</span><br><span class="line">        rfidFile.setPath(path.toString());</span><br><span class="line">        rfidFile.setUploadtime(new Date());</span><br><span class="line">        rfidFileMapper.updateByPrimaryKey(rfidFile);</span><br><span class="line">        return rfidFile.getId();</span><br><span class="line">     &#125; catch (Exception e) &#123;</span><br><span class="line">      LOG.error(&quot;文件保存异常：&quot;, e);</span><br><span class="line">      throw new BusinessException(&quot;文件保存出现异常&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/15/附件上传/" data-id="cjoi96yxx000k6whx232mcaxb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/15/附件上传/" data-id="cjoidnock000lf8hx5jdr821o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -101,6 +101,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/11/15/导入工具类/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          导入工具类
+        
+      </div>
+    </a>
   
   
     <a href="/2018/11/15/邮件解析/" id="article-nav-older" class="article-nav-link-wrap">
@@ -156,6 +165,10 @@
       <ul>
         
           <li>
+            <a href="/2018/11/15/导入工具类/">导入工具类</a>
+          </li>
+        
+          <li>
             <a href="/2018/11/15/附件上传/">附件上传</a>
           </li>
         
@@ -169,10 +182,6 @@
         
           <li>
             <a href="/2018/11/15/时间计算工具类/">时间计算工具类</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/14/md-格式实例/">md 格式实例</a>
           </li>
         
       </ul>
