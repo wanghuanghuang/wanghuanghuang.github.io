@@ -5,15 +5,19 @@
   
 
   
-  <title>Archives: 2018 | Hexo</title>
+  <title>字符串去空格 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2018/page/2/index.html">
+  <meta name="description" content="今天，在做项目的时候会有字段校验的问题，传入一个String类型的字符串，如果要去除空格怎么办？1.trim();1234String s = &amp;quot; a d c &amp;quot;;System.out.println(&amp;quot;输出&amp;quot;+s.length()); //7String s1 = s.trim();System.out.println(&amp;quot;输出&amp;quot;+s1.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串去空格">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/字符串去空格/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="今天，在做项目的时候会有字段校验的问题，传入一个String类型的字符串，如果要去除空格怎么办？1.trim();1234String s = &amp;quot; a d c &amp;quot;;System.out.println(&amp;quot;输出&amp;quot;+s.length()); //7String s1 = s.trim();System.out.println(&amp;quot;输出&amp;quot;+s1.">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-15T01:07:55.769Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="字符串去空格">
+<meta name="twitter:description" content="今天，在做项目的时候会有字段校验的问题，传入一个String类型的字符串，如果要去除空格怎么办？1.trim();1234String s = &amp;quot; a d c &amp;quot;;System.out.println(&amp;quot;输出&amp;quot;+s.length()); //7String s1 = s.trim();System.out.println(&amp;quot;输出&amp;quot;+s1.">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,159 +64,64 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/10/22/Nginx-转发-域名配置/" class="archive-article-date">
-  <time datetime="2018-10-22T09:34:37.000Z" itemprop="datePublished">Oct 22</time>
+        <section id="main"><article id="post-字符串去空格" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/14/字符串去空格/" class="article-date">
+  <time datetime="2018-11-14T07:41:23.000Z" itemprop="datePublished">2018-11-14</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/22/Nginx-转发-域名配置/">Nginx 转发 + 域名配置</a>
+    <h1 class="article-title" itemprop="name">
+      字符串去空格
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/10/16/inert-into-select语句使用/" class="archive-article-date">
-  <time datetime="2018-10-16T03:51:38.000Z" itemprop="datePublished">Oct 16</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/16/inert-into-select语句使用/">inert-into-select语句使用</a>
-    </h1>
-  
+        <p>今天，在做项目的时候会有字段校验的问题，传入一个String类型的字符串，如果要去除空格怎么办？<br>1.trim();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s = &quot; a d c &quot;;</span><br><span class="line">System.out.println(&quot;输出&quot;+s.length()); //7</span><br><span class="line">String s1 = s.trim();</span><br><span class="line">System.out.println(&quot;输出&quot;+s1.length());//5</span><br></pre></td></tr></table></figure></p>
+<p>trim()方法 只会去除字符串的首尾空格<br>2.replaceAll();<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s = &quot; a d c &quot;;</span><br><span class="line">System.out.println(&quot;输出&quot;+s.length()); //7</span><br><span class="line">String s1 = s.replaceAll(&quot; &quot;,&quot;&quot;);</span><br><span class="line">System.out.println(&quot;输出&quot;+s1.length());//3</span><br></pre></td></tr></table></figure></p>
+<p>第一个参数是要被替换的内容  第二个参数是要被替换为的内容<br>3.正则表达式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String s = &quot; a   d&quot; +</span><br><span class="line">               &quot;c &quot;;</span><br><span class="line">System.out.println(&quot;输出&quot;+s.length()); //8</span><br><span class="line">String s1 = s.replaceAll(&quot;\\s*&quot;,&quot;&quot;);</span><br><span class="line">System.out.println(&quot;输出&quot;+s1.length());//3</span><br></pre></td></tr></table></figure></p>
+<p>利用正则表达式 可以去除制表符 空格 空白符</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/10/16/idea查看依赖关系/" class="archive-article-date">
-  <time datetime="2018-10-16T03:28:32.000Z" itemprop="datePublished">Oct 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/10/16/idea查看依赖关系/">idea查看依赖关系</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/14/服务器restart-sh脚本中的含义/" class="archive-article-date">
-  <time datetime="2018-09-14T09:09:22.000Z" itemprop="datePublished">Sep 14</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/14/字符串去空格/" data-id="cjoi96yxk00056whxon952tjm" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/14/服务器restart-sh脚本中的含义/">服务器restart.sh脚本中的含义</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/14/用命令行把项目部署到github/" class="archive-article-date">
-  <time datetime="2018-09-14T09:01:54.000Z" itemprop="datePublished">Sep 14</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/14/用命令行把项目部署到github/">用命令行把项目部署到github</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/11/14/md-格式实例/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          md 格式实例
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/31/idea使用git输入密码错误/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">idea使用git输入密码错误</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/14/pageHelper-分页应用/" class="archive-article-date">
-  <time datetime="2018-09-14T06:08:26.000Z" itemprop="datePublished">Sep 14</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/14/pageHelper-分页应用/">pageHelper 分页应用</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/09/05/RESTful-API/" class="archive-article-date">
-  <time datetime="2018-09-05T09:24:17.000Z" itemprop="datePublished">Sep 5</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/05/RESTful-API/">RESTful API</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
-  </nav>
 
 </section>
         
