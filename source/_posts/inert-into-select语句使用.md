@@ -3,8 +3,8 @@ title: inert-into-select语句使用
 date: 2018-10-16 11:51:38
 tags:
 ---
-
-
+![猫咪老师](/images/页面图片/3.jpg)
+<!--more-->
 Insert into select 语句 顾名思义 就是 插入一查询出来的数据
 举一个例子：
 现有一个表：

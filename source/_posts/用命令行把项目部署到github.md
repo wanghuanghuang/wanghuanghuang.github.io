@@ -4,8 +4,8 @@ date: 2018-09-14 17:01:54
 tags:
     - 用命令行把项目部署到github
 ---
-
-
+![猫咪老师](/images/页面图片/16.png)
+<!--more-->
 ## 1.项目首次提交到github上
 a)	打开项目所在文件位置，右击点击Git Bash Here.
 b)	$git init 		//初始化

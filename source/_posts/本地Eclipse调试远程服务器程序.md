@@ -3,7 +3,8 @@ title: 本地Eclipse调试远程服务器程序
 date: 2018-10-23 11:38:58
 tags:
 ---
-
+![猫咪老师](/images/页面图片/14.png)
+<!--more-->
 ## 1.	远程服务器：Java程序执行脚本添加配置
 ![eclipse1](/images/本地Eclipse调试远程服务器程序/eclipse1.png)
 -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=54321
