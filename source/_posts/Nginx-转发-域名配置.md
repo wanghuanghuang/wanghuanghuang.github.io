@@ -4,7 +4,6 @@ date: 2018-10-22 17:34:37
 tags:
 ---
 ![猫咪老师](/images/页面图片/5.jpeg)
-<!--more-->
 ## 服务器中nginx 配置文件位置：
 ![nginx图片](/images/Nginx 转发_域名配置/nginx图片.png)
 ### 1.nginx.conf 

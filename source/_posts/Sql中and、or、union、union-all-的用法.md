@@ -4,7 +4,6 @@ date: 2018-10-23 11:21:03
 tags:
 ---
 ![猫咪老师](/images/页面图片/8.jpeg)
-<!--more-->
 And 是“和、并且”的意思 
 Or 是 “或者” 的意思
 Union 与 union all 是 “联合” 的意思 区别为 union 去重 union all 不去重

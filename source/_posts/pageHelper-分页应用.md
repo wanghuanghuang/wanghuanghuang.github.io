@@ -5,7 +5,6 @@ tags:
     - pageHelper 分页应用
 ---
 ![猫咪老师](/images/页面图片/6.jpeg)
-<!--more-->
 ## 1.pagehelper 分页原理
 pageHelper 是做什么的呢？他是封装了分页的后台部分，说的简单一点，就是你不需要每个POJO类的增删改查里都包括那两个方法了，他帮你做了。你只需要有一个selectAll的方法，他会根据你使用的数据库将你selectAll的sql改装成一个分页查询的SQL，并顺带生成一个查询总数的SQL。
 ### 1.1 如何进行拦截的呢？

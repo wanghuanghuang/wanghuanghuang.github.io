@@ -5,7 +5,6 @@ tags:
     - 服务器restart.sh脚本中的含义
 ---
 ![猫咪老师](/images/页面图片/13.png)
-<!--more-->
 ## Restart.sh 脚本内容：
 ```
 #!/bin/bash
