@@ -183,7 +183,7 @@
             </div>
         </div>
         <div class="post-content markdown-body">
-            <p><img src="/images/页面图片/7.jpeg" alt="猫咪老师"><br><a id="more"></a></p>
+            <p><img src="/images/页面图片/7.jpeg" alt="猫咪老师"></p>
 <h1 id="路径定义"><a href="#路径定义" class="headerlink" title="路径定义"></a>路径定义</h1><h2 id="版本号"><a href="#版本号" class="headerlink" title="版本号"></a>版本号</h2><p>在 RESTful API 中，API 接口应该尽量兼容之前的版本。但是，在实际业务开发场景中，可能随着业务需求的不断迭代，现有的 API 接口无法支持旧版本的适配，此时如果强制升级服务端的 API 接口将导致客户端旧有功能出现故障。实际上，Web 端是部署在服务器，因此它可以很容易为了适配服务端的新的 API 接口进行版本升级，然而像 Android 端、IOS 端、PC 端等其他客户端是运行在用户的机器上，因此当前产品很难做到适配新的服务端的 API 接口，从而出现功能故障，这种情况下，用户必须升级产品到最新的版本才能正常使用。</p>
 <p>为了解决这个版本不兼容问题，在设计 RESTful API 的一种实用的做法是使用版本号。一般情况下，我们会在 url 中保留版本号，并同时兼容多个版本。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">【GET】  /v1/users/&#123;user_id&#125;  // 版本 v1 的查询用户列表的 API 接口</span><br><span class="line">【GET】  /v2/users/&#123;user_id&#125;  // 版本 v2 的查询用户列表的 API 接口</span><br></pre></td></tr></table></figure>
