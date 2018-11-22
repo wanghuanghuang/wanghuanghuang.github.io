@@ -1,189 +1,76 @@
-<!DOCTYPE HTML>
-<html class="no-js" lang="zh-CN">
-<!--
-//                            _ooOoo_
-//                           o8888888o
-//                           88" . "88
-//                           (| -_- |)
-//                            O\ = /O
-//                        ____/`---'\____
-//                      .   ' \\| |// `.
-//                       / \\||| : |||// \
-//                     / _||||| -:- |||||- \
-//                       | | \\\ - /// | |
-//                     | \_| ''\---/'' | |
-//                      \ .-\__ `-` ___/-. /
-//                   ___`. .' /--.--\ `. . __
-//                ."" '< `.___\_<|>_/___.' >'"".
-//               | | : `- \`.;`\ _ /`;.`/ - ` : | |
-//                 \ \ `-. \_ __\ /__ _/ .-` / /
-//         ======`-.____`-.___\_____/___.-`____.-'======
-//                            `=---='
-//                 拦截插件累计拦截逗比攻击"1381438"次！
-//         .............................................
-//                  佛祖保佑             永无BUG
-//          佛曰:
-//                  写字楼里写字间，写字间里程序员；
-//                  程序人员写程序，又拿程序换酒钱。
-//                  酒醒只在网上坐，酒醉还来网下眠；
-//                  酒醉酒醒日复日，网上网下年复年。
-//                  但愿老死电脑间，不愿鞠躬老板前；
-//                  奔驰宝马贵者趣，公交自行程序员。
-//                  别人笑我忒疯癫，我笑自己命太贱；
-//                  不见满街漂亮妹，哪个归得程序员？
--->
+<!DOCTYPE html>
+<html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
-    <!--[if lte IE 9]>
-<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
-<![endif]-->
-<meta charset="utf-8">
-
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
-<meta name="author" content="John Doe">
-<link rel="stylesheet" href="/css/SimpleStyle.min.css">
-
-<link rel="shortcut icon" href="/images/favicon.png">
-
-
-<title>pagehelper 分页应用 - Hexo</title>
-
-<meta name="keywords" content="">
-
-<meta name="description " content="">
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="keywords" content="hexo,个人博客,blog">
+  <meta name="description" content="某某的个人博客">
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+  
+  <link rel="dns-prefetch" href="https://widget.daovoice.io">
+  <link rel="dns-prefetch" href="https://widget-static-cdn.daovoice.io">
+  <link rel="dns-prefetch" href="https://im.daovoice.io">
+  
+  
+  <link rel="dns-prefetch" href="https://hm.baidu.com/">
+  
+  
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://api.github.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  
+  <link rel="stylesheet" type="text/css" href="/./style/main.651055.css">
+	<link rel="shortcut icon" href="/favicon.ico" title="Favicon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+	<title>pageHelper 分页应用</title>
+  
+  <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?awwssw1snsnsnn1ndndnndnd99j";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();
+  </script>
+  
+  
+    <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/123456.js","daovoice");daovoice('init',{app_id: "123456"});daovoice('update');
+  </script>
+  
 </head>
 <body>
-<div id="nav">
-    <nav class="nav-menu">
-        <a class="site-name current" href="/" title="说">说</a>
-        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
-        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
-        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
-        <!-- custom single page of menus -->
-        
-        
-        <a href="/help" title="帮助">
-            <i class="fa fa-question-circle"></i>
-            <span>帮助</span>
-        </a>
-        
-    </nav>
+<canvas id="pattern-placeholder" height="230"></canvas>
+<div class="navbar-header">
+  <a class="blog-title" href="/">Hexo</a>
+  <a class="face-img" href="/">
+    <img src="https://tva3.sinaimg.cn/crop.0.0.200.200.180/005Kc3C1jw8f2uep0hhkvj305k05k3yk.jpg">
+  </a>
 </div>
+<main>
+  <div class="article-title">
+    
+  
+  <h1 class="title">
+    pageHelper 分页应用
+  </h1>
+  
 
-<div class="nav-user">
-    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
-    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
-    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
-</div>
 
-<div id="wrapper" class="clearfix">
-    <div id="body">
-        <div class="main" id="main">
-            <div id="cover">
-    <div class="cover-img"></div>
-    <div class="cover-info">
+    <ul class="article-info">
+      <li>
+        发布
+        <time datetime="2018-09-14T06:08:26.000Z" itemprop="datePublished">2018-09-14</time>
+      </li>
+      <li>
         
-        <h1 class="cover-siteName">说IT</h1>
-        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
-        <p class="cover-siteDesc">一个关注技术与人文的IT博客</p>
-        <div class="cover-sns">
-            
-            <div class="btn btn-telegram">
-                <a href="http://t.me/kunyintang" target="_blank" title="telegram" ref="friend">
-                    <i class="fa fa-telegram"></i>
-                </a>
-            </div>
-            
-            <div class="btn btn-instagram">
-                <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
-                    <i class="fa fa-instagram"></i>
-                </a>
-            </div>
-            
-            <div class="btn btn-twitter">
-                <a href="https://twitter.com/tangkunyin" target="_blank" title="twitter" ref="friend">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </div>
-            
-            <div class="btn btn-github">
-                <a href="https://github.com/tangkunyin" target="_blank" title="github" ref="friend">
-                    <i class="fa fa-github"></i>
-                </a>
-            </div>
-            
-        </div>
-    </div>
-</div>
-            <div class="page-title">
-    <ul>
-        <li><a href="/">最新</a></li>
-        
-        
-        
-        <li class="page-search">
-    <form id="search" class="search-form">
-        <label for="s" class="sr-only">Input Search key Words Here</label>
-        <input class="search-field" type="text" name="s" placeholder="Input Search key Words Here">
-        <button type="submit" class="search-form-submit" title="Search"><i class="fa fa-search"></i></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-</li>
+    更新 <time datetime="2018-11-16T00:51:35.466Z" itemprop="dateUpdated">2018-11-16</time>
 
+      </li>
+      <li id="busuanzi_container_page_pv">
+        阅读 <span id="busuanzi_value_page_pv"></span>
+      </li>
     </ul>
-</div>
-<div class="main-inner">
-    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
-        <div class="post-header">
-            <div class="post-author clearfix">
-                <a class="avatar fleft" href="" target="_blank">
-                    <img width="48" src="" alt="avatar">
-                </a>
-                <p><span class="label">作者</span>
-                    <a href="" target="_blank"></a>
-                    <span title="最后编辑于2018-09-14">2018-09-14</span>
-                </p>
-                <p></p>
-            </div>
-            <h2 class="post-title">pageHelper 分页应用</h2>
-            <div class="post-meta">
-                本文总共27400个字 | 您是第<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
-            </div>
-        </div>
-        <div class="post-content markdown-body">
-            <p><img src="/images/页面图片/6.jpeg" alt="猫咪老师"></p>
+  </div>
+  <div class="container">
+    <div class="article">
+      <div class="content">
+        <p><img src="/images/页面图片/6.jpeg" alt="猫咪老师"></p>
 <h2 id="1-pagehelper-分页原理"><a href="#1-pagehelper-分页原理" class="headerlink" title="1.pagehelper 分页原理"></a>1.pagehelper 分页原理</h2><p>pageHelper 是做什么的呢？他是封装了分页的后台部分，说的简单一点，就是你不需要每个POJO类的增删改查里都包括那两个方法了，他帮你做了。你只需要有一个selectAll的方法，他会根据你使用的数据库将你selectAll的sql改装成一个分页查询的SQL，并顺带生成一个查询总数的SQL。</p>
 <h3 id="1-1-如何进行拦截的呢？"><a href="#1-1-如何进行拦截的呢？" class="headerlink" title="1.1 如何进行拦截的呢？"></a>1.1 如何进行拦截的呢？</h3><p>通常我们使用这个插件的，配置一个拦截器“com.github.pagehelper.PageInterceptor”，让我们看看这个拦截器里面做了什么操作？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line"> * The MIT License (MIT)</span><br><span class="line"> *</span><br><span class="line"> * Copyright (c) 2014-2017 abel533@gmail.com</span><br><span class="line"> *</span><br><span class="line"> * Permission is hereby granted, free of charge, to any person obtaining a copy</span><br><span class="line"> * of this software and associated documentation files (the &quot;Software&quot;), to deal</span><br><span class="line"> * in the Software without restriction, including without limitation the rights</span><br><span class="line"> * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span><br><span class="line"> * copies of the Software, and to permit persons to whom the Software is</span><br><span class="line"> * furnished to do so, subject to the following conditions:</span><br><span class="line"> *</span><br><span class="line"> * The above copyright notice and this permission notice shall be included in</span><br><span class="line"> * all copies or substantial portions of the Software.</span><br><span class="line"> *</span><br><span class="line"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span><br><span class="line"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span><br><span class="line"> * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span><br><span class="line"> * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span><br><span class="line"> * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span><br><span class="line"> * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span><br><span class="line"> * THE SOFTWARE.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">package com.github.pagehelper;</span><br><span class="line"></span><br><span class="line">import com.github.pagehelper.cache.Cache;</span><br><span class="line">import com.github.pagehelper.cache.CacheFactory;</span><br><span class="line">import com.github.pagehelper.util.MSUtils;</span><br><span class="line">import com.github.pagehelper.util.StringUtil;</span><br><span class="line">import org.apache.ibatis.cache.CacheKey;</span><br><span class="line">import org.apache.ibatis.executor.Executor;</span><br><span class="line">import org.apache.ibatis.mapping.BoundSql;</span><br><span class="line">import org.apache.ibatis.mapping.MappedStatement;</span><br><span class="line">import org.apache.ibatis.plugin.*;</span><br><span class="line">import org.apache.ibatis.session.ResultHandler;</span><br><span class="line">import org.apache.ibatis.session.RowBounds;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Field;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Map;</span><br><span class="line">import java.util.Properties;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Mybatis - 通用分页拦截器&lt;br/&gt;</span><br><span class="line"> * 项目地址 : http://git.oschina.net/free/Mybatis_PageHelper</span><br><span class="line"> *</span><br><span class="line"> * @author liuzh/abel533/isea533</span><br><span class="line"> * @version 5.0.0</span><br><span class="line"> */</span><br><span class="line">@SuppressWarnings(&#123;&quot;rawtypes&quot;, &quot;unchecked&quot;&#125;)</span><br><span class="line">@Intercepts(</span><br><span class="line">    &#123;</span><br><span class="line">        @Signature(type = Executor.class, method = &quot;query&quot;, args = &#123;MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class&#125;),</span><br><span class="line">        @Signature(type = Executor.class, method = &quot;query&quot;, args = &#123;MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class, CacheKey.class, BoundSql.class&#125;),</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br><span class="line">public class PageInterceptor implements Interceptor &#123;</span><br><span class="line">    //缓存count查询的ms</span><br><span class="line">    protected Cache&lt;CacheKey, MappedStatement&gt; msCountMap = null;</span><br><span class="line">    private Dialect dialect;</span><br><span class="line">    private String default_dialect_class = &quot;com.github.pagehelper.PageHelper&quot;;</span><br><span class="line">    private Field additionalParametersField;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Object intercept(Invocation invocation) throws Throwable &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            Object[] args = invocation.getArgs();</span><br><span class="line">            MappedStatement ms = (MappedStatement) args[0];</span><br><span class="line">            Object parameter = args[1];</span><br><span class="line">            RowBounds rowBounds = (RowBounds) args[2];</span><br><span class="line">            ResultHandler resultHandler = (ResultHandler) args[3];</span><br><span class="line">            Executor executor = (Executor) invocation.getTarget();</span><br><span class="line">            CacheKey cacheKey;</span><br><span class="line">            BoundSql boundSql;</span><br><span class="line">            //由于逻辑关系，只会进入一次</span><br><span class="line">            if(args.length == 4)&#123;</span><br><span class="line">                //4 个参数时</span><br><span class="line">                boundSql = ms.getBoundSql(parameter);</span><br><span class="line">                cacheKey = executor.createCacheKey(ms, parameter, rowBounds, boundSql);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                //6 个参数时</span><br><span class="line">                cacheKey = (CacheKey) args[4];</span><br><span class="line">                boundSql = (BoundSql) args[5];</span><br><span class="line">            &#125;</span><br><span class="line">            List resultList;</span><br><span class="line">            //调用方法判断是否需要进行分页，如果不需要，直接返回结果</span><br><span class="line">            if (!dialect.skip(ms, parameter, rowBounds)) &#123;</span><br><span class="line">                //反射获取动态参数</span><br><span class="line">                Map&lt;String, Object&gt; additionalParameters = (Map&lt;String, Object&gt;) additionalParametersField.get(boundSql);</span><br><span class="line">                //判断是否需要进行 count 查询</span><br><span class="line">                if (dialect.beforeCount(ms, parameter, rowBounds)) &#123;</span><br><span class="line">                    //创建 count 查询的缓存 key</span><br><span class="line">                    CacheKey countKey = executor.createCacheKey(ms, parameter, RowBounds.DEFAULT, boundSql);</span><br><span class="line">                    countKey.update(&quot;_Count&quot;);</span><br><span class="line">                    MappedStatement countMs = msCountMap.get(countKey);</span><br><span class="line">                    if (countMs == null) &#123;</span><br><span class="line">                        //根据当前的 ms 创建一个返回值为 Long 类型的 ms</span><br><span class="line">                        countMs = MSUtils.newCountMappedStatement(ms);</span><br><span class="line">                        msCountMap.put(countKey, countMs);</span><br><span class="line">                    &#125;</span><br><span class="line">                    //调用方言获取 count sql</span><br><span class="line">                    String countSql = dialect.getCountSql(ms, boundSql, parameter, rowBounds, countKey);</span><br><span class="line">                    BoundSql countBoundSql = new BoundSql(ms.getConfiguration(), countSql, boundSql.getParameterMappings(), parameter);</span><br><span class="line">                    //当使用动态 SQL 时，可能会产生临时的参数，这些参数需要手动设置到新的 BoundSql 中</span><br><span class="line">                    for (String key : additionalParameters.keySet()) &#123;</span><br><span class="line">                        countBoundSql.setAdditionalParameter(key, additionalParameters.get(key));</span><br><span class="line">                    &#125;</span><br><span class="line">                    //执行 count 查询</span><br><span class="line">                    Object countResultList = executor.query(countMs, parameter, RowBounds.DEFAULT, resultHandler, countKey, countBoundSql);</span><br><span class="line">                    Long count = (Long) ((List) countResultList).get(0);</span><br><span class="line">                    //处理查询总数</span><br><span class="line">                    //返回 true 时继续分页查询，false 时直接返回</span><br><span class="line">                    if (!dialect.afterCount(count, parameter, rowBounds)) &#123;</span><br><span class="line">                        //当查询总数为 0 时，直接返回空的结果</span><br><span class="line">                        return dialect.afterPage(new ArrayList(), parameter, rowBounds);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                //判断是否需要进行分页查询</span><br><span class="line">                if (dialect.beforePage(ms, parameter, rowBounds)) &#123;</span><br><span class="line">                    //生成分页的缓存 key</span><br><span class="line">                    CacheKey pageKey = cacheKey;</span><br><span class="line">                    //处理参数对象</span><br><span class="line">                    parameter = dialect.processParameterObject(ms, parameter, boundSql, pageKey);</span><br><span class="line">                    //调用方言获取分页 sql</span><br><span class="line">                    String pageSql = dialect.getPageSql(ms, boundSql, parameter, rowBounds, pageKey);</span><br><span class="line">                    BoundSql pageBoundSql = new BoundSql(ms.getConfiguration(), pageSql, boundSql.getParameterMappings(), parameter);</span><br><span class="line">                    //设置动态参数</span><br><span class="line">                    for (String key : additionalParameters.keySet()) &#123;</span><br><span class="line">                        pageBoundSql.setAdditionalParameter(key, additionalParameters.get(key));</span><br><span class="line">                    &#125;</span><br><span class="line">                    //执行分页查询</span><br><span class="line">                    resultList = executor.query(ms, parameter, RowBounds.DEFAULT, resultHandler, pageKey, pageBoundSql);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    //不执行分页的情况下，也不执行内存分页</span><br><span class="line">                    resultList = executor.query(ms, parameter, RowBounds.DEFAULT, resultHandler, cacheKey, boundSql);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                //rowBounds用参数值，不使用分页插件处理时，仍然支持默认的内存分页</span><br><span class="line">                resultList = executor.query(ms, parameter, rowBounds, resultHandler, cacheKey, boundSql);</span><br><span class="line">            &#125;</span><br><span class="line">            return dialect.afterPage(resultList, parameter, rowBounds);</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            dialect.afterAll();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public Object plugin(Object target) &#123;</span><br><span class="line">        return Plugin.wrap(target, this);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void setProperties(Properties properties) &#123;</span><br><span class="line">        //缓存 count ms</span><br><span class="line">        msCountMap = CacheFactory.createCache(properties.getProperty(&quot;msCountCache&quot;), &quot;ms&quot;, properties);</span><br><span class="line">        String dialectClass = properties.getProperty(&quot;dialect&quot;);</span><br><span class="line">        if (StringUtil.isEmpty(dialectClass)) &#123;</span><br><span class="line">            dialectClass = default_dialect_class;</span><br><span class="line">        &#125;</span><br><span class="line">        try &#123;</span><br><span class="line">            Class&lt;?&gt; aClass = Class.forName(dialectClass);</span><br><span class="line">            dialect = (Dialect) aClass.newInstance();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            throw new PageException(e);</span><br><span class="line">        &#125;</span><br><span class="line">        dialect.setProperties(properties);</span><br><span class="line">        try &#123;</span><br><span class="line">            //反射获取 BoundSql 中的 additionalParameters 属性</span><br><span class="line">            additionalParametersField = BoundSql.class.getDeclaredField(&quot;additionalParameters&quot;);</span><br><span class="line">            additionalParametersField.setAccessible(true);</span><br><span class="line">        &#125; catch (NoSuchFieldException e) &#123;</span><br><span class="line">            throw new PageException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>通过源代码发现：拦截器会根据参数来判断使用需要进行的物理分页，不使用分页插件处理时，仍支持默认的内存分页。需要分页时候，根据条件判断是否需要count和limit处理。</p>
@@ -195,65 +82,65 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">service:</span><br><span class="line">@Override</span><br><span class="line">    public Page&lt;VehicleManagementQueryParam&gt; getVehicleManagementInfo(VehicleManagementQueryParam vehicleManagementQueryParam) &#123;</span><br><span class="line">        AccUser loginUser = ContextUtils.getLoginUser();</span><br><span class="line">        Integer shopId = loginUser.getCustomerId();</span><br><span class="line">        //安装时间倒序</span><br><span class="line">        if (vehicleManagementQueryParam.sortParamIsEmply()) &#123;</span><br><span class="line">            vehicleManagementQueryParam.setSort_desc(&quot;insatlltime&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        PageHelper.startPage(Integer.valueOf(vehicleManagementQueryParam.getPage_index()),</span><br><span class="line">                Integer.valueOf(vehicleManagementQueryParam.getPage_size()));</span><br><span class="line">        List&lt;VehicleManagementQueryParam&gt; vehicleManagementList =</span><br><span class="line">                vehicleManagementMapper.getVehicleManagementInfo(vehicleManagementQueryParam, shopId);</span><br><span class="line">        return (Page&lt;VehicleManagementQueryParam&gt;) vehicleManagementList;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">mapper:</span><br><span class="line">&lt;select id=&quot;getVehicleManagementInfo&quot;</span><br><span class="line">            resultType=&quot;com.diditech.iov.inventory.domain.VehicleManagementQueryParam&quot;&gt;</span><br><span class="line">        SELECT</span><br><span class="line">        cvi.VEHICLE_ID vehicleId,</span><br><span class="line">        cvi.VEHICLE_BRAND_NAME vehicleType,</span><br><span class="line">        cvi.VEHICLE_SERIES vehicleSerie,</span><br><span class="line">        cvi.PLATE_NUM frameNo,</span><br><span class="line">        cvi.WAREHOUSE_NAME wareHoseName,</span><br><span class="line">        cvi.INSTALL_TIME installDate,</span><br><span class="line">        cvi.INVENTORY_TIME wareHousingTime,</span><br><span class="line">        cvi.DEVICE_NUM deviceNum,</span><br><span class="line">        cvi.SIM_NUM simNum,</span><br><span class="line">        cvi.ISRELEASED detentionState,</span><br><span class="line">        cvi.RELEASE_TIME detentionTime,</span><br><span class="line">        cvi.ISFORRESALE resaleState,</span><br><span class="line">        cvi.RESALE_TIME resaleTime</span><br><span class="line">        FROM</span><br><span class="line">        dd_new.inventory_rpt_current cvi</span><br><span class="line">        INNER JOIN dd_new.inventory_vehicle_ref vr</span><br><span class="line">        ON vr.VEHICLE_ID = cvi.VEHICLE_ID</span><br><span class="line">        WHERE</span><br><span class="line">        vr.customer_4s_id = #&#123;shopId&#125;</span><br><span class="line">        &lt;if test=&quot;vehicleManagementQueryParam.wareHouseId != null&quot; &gt;</span><br><span class="line">            AND vr.WAREHOUSE_ID = #&#123;vehicleManagementQueryParam.wareHouseId&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;vehicleManagementQueryParam.startTime != null&quot; &gt;</span><br><span class="line">            AND cvi.INVENTORY_TIME &amp;gt;= #&#123;vehicleManagementQueryParam.startTime&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;vehicleManagementQueryParam.endTime != null&quot; &gt;</span><br><span class="line">            AND cvi.INVENTORY_TIME &amp;lt;= #&#123;vehicleManagementQueryParam.endTime&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;vehicleManagementQueryParam.deviceNum != null and vehicleManagementQueryParam.deviceNum != &apos;&apos;&quot;&gt;</span><br><span class="line">            AND cvi.DEVICE_NUM LIKE CONCAT (&apos;%&apos;,#&#123;vehicleManagementQueryParam.deviceNum&#125;,&apos;%&apos;)</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">        &lt;if test=&quot;vehicleManagementQueryParam.sort_desc != null and vehicleManagementQueryParam.sort_desc != &apos;&apos;&quot; &gt;</span><br><span class="line">            ORDER BY $&#123;vehicleManagementQueryParam.sort_desc&#125;</span><br><span class="line">        &lt;/if&gt;</span><br><span class="line">    &lt;/select&gt;</span><br></pre></td></tr></table></figure>
 
+      </div>
+        <div class="support-author">
+          <p>感谢您的阅读。 🙏
+          <a href="https://888.com/index.html" target="_blank">关于转载请看这里</a>
+            <!--<a class="btn-pay"  href="#pay-modal">¥ 打赏支持</a>-->
+          </p>
         </div>
-        <div class="post-tool">
-            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
-                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
-            </a>
+        <!--
+            <div class="like ">
+              <div class="like-button">
+                <a id="like-note" href="">
+                  <i class="icon-heart"></i>喜欢
+                </a>
+              </div>
+              <span id="likes-count">256</span>
+            </div>
+        -->
+        <div class="otherLink">
+          <div class="previous">
+          </div>
+          <div class="next">
+          </div>
         </div>
-        
-        <div class="post-tags">Tags：
-            
-            <a href="/tags/pageHelper-分页应用/">pageHelper 分页应用</a>
-            
-        </div>
-        
-    </article>
-    
-    <p>本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
-    
-    
-</div>
-<script src="/js/busuanzi.pure.mini.js"></script>
+        <div class="comments" id="comments">
+          
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  const gitalk = new Gitalk({
+    clientID: '8888a8888',
+    clientSecret: '8888886666666',
+    repo: 'xxxx.github.io',
+    owner: 'admin',
+    admin: ['admin'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false
+  })
 
-        </div><!-- end #main-->
-    </div><!-- end #body -->
-    <footer class="footer">
-    <div class="footer-inner">
-        <p>
-            <a href="/about" title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
-            <!-- 自定义链接 -->
-            <a href="/help" title="help">急救中心</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
-            <a href="/links" title="友情链接">友情链接</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
-            <a href="/app" title="App下载">App下载</a>
-        </p>
-        <p>
-            本站点采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>，已建立<a href="/timeline" id="siteBuildingTime"></a>天<br>
-            ©2017 基于<a href="http://hexo.io" target="_blank">Hexo</a>搭建
-            ，主题&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank">JSimple</a>
-            ，作者<a href="https://www.tangkunyin.com" target="_blank">唐先森</a>
-            ，Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>
-        </p>
-        
-
-    </div>
-</footer>
-<script src="/js/InsightSearch.js"></script>
-<script src="/js/SimpleCore.js"></script>
-
-</div>
-<div class="fixed-btn">
-    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
-</div>
-<script>
-    $(function () {
-        SimpleCore.init({
-            buildingTime: '01/20/2018',
-            current: $('.post-tags').length > 0 ? 'post' : 'archive',
-            snsQRCode: '/images/sns-qrcode.png',
-            donateImg: '/images/donate-qr.png',
-        });
-    });
+  gitalk.render('comments');
 </script>
+
+
+        </div>
+      </div>
+    </div>
+   
+</main>
+<div class="footer">
+  <div class="info">
+    <p>
+    <a href="https://hexo.io"> Hexo </a> 强力驱动 |
+      <a href="https://github.com/Youthink/hexo-themes-yearn"> Yearn </a>
+      主题
+    </p>
+    <p>&copy;2013-2018 某某的博客 京ICP备xxxxxx号</p>
+  </div>
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script type="text/javascript" src="/./js/main.651055.js"></script>
+
 </body>
 </html>
