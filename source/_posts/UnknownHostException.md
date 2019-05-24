@@ -5,7 +5,7 @@ tags:
 ---
 
 springboot 工程，各服务之间调用，两个服务均已注册到erueka上，服务之间调用报错：UnknownHostException：
-###解决：
+### 解决：
 修改hosts文件
 1、window环境：
 
@@ -13,7 +13,7 @@ hosts文件位置：C:\windows\system32\drivers\etc\hosts
 
 修改如图：
 ip + 域名
-![host文件修改](source/images/UnknownHostException/host文件修改.png)
+![host文件修改](/images/UnknownHostException/host文件修改.png)
 
 刷新方式：
 
