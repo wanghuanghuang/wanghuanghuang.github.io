@@ -7,7 +7,7 @@ title: Hexo
 subtitle:
 description:
 keywords:
-author: John Doe
+author: whh
 language:
 timezone:
 
@@ -81,6 +81,6 @@ theme: yearn
 deploy:
   type: git
   repo: 
-    github: git@github.com:wanghuanghuang/wanghuanghuang.github.io.git
+    #github: git@github.com:wanghuanghuang/wanghuanghuang.github.io.git
     coding: git@git.coding.net:whuanghuang/whuanghuang.coding.me.git
   branch: master
