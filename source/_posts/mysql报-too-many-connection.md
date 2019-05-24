@@ -9,7 +9,7 @@ too many connection -mysql连接数过多
 1.选择需要查询的database，新建查询
 2.命令 show PROCESSLIST
 连接结果如图：
-![picture1](source/images/mysql报too many connection/show_processList.png)
+![picture1](/images/mysql报too many connection/show_processList.png)
 拷贝出到文本里 筛选自己账户下的sleep状态的线程ID kill掉 就ok了。
 
 
