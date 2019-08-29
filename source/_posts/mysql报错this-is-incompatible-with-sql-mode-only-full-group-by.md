@@ -39,25 +39,27 @@ ONLY_FULL_GROUP_BY意思：
 解决方案：
 先查询sql-mode设置：
     ```
-    查看全局sql-mode设置：
-    SELECT @@GLOBAL.sql_mode;
-    查看会话sql-mode设置：
-    SELECT @@SESSION.sql_mode;
-    ```    
+        查看全局sql-mode设置：
+        SELECT @@GLOBAL.sql_mode;
+        查看会话sql-mode设置：
+        SELECT @@SESSION.sql_mode;   
+    ```
     
 1）将select查询列加入到group by 条件后面，或者加入聚合函数中（不推荐）
 2）设置sql-mode 去除默认ONLY_FULL_GROUP_BY： 
 全局模式在线设置需要超级权限(SUPER)，新的连接才会生效；会话级别模式每个客户端都可设置。
     <1>命令行关闭ONLY_FULL_GROUP_BY
-        ```
+    ```
         （将查询的结果去除ONLY_FULL_GROUP_BY）
         set @@GLOBAL.sql_mode='';
             set sql_mode ='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';
-        ``` 
-    
+    ```     
    这个时候 在用工具select 一下,发现已经不存在ONLY_FULL_GROUP_BY ，感觉已经OK。但是如果你重启Mysql服务的话，发现ONLY_FULL_GROUP_BY还是会存在的.
     <2>配置文件彻底解决：
     修改my.ini配置（mysql没有这个文件就把my-default.ini）
     在"mysqld"和"mysql"下添加：
-    sql_mode ='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';（将查询的结果去除ONLY_FULL_GROUP_BY）
+   ```
+        sql_mode ='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION';（将查询的结果去除ONLY_FULL_GROUP_BY）
+   ```
+    
 
