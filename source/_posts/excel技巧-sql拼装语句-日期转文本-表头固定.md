@@ -13,4 +13,4 @@ tags:
 使用公式：=TEXT(要转换的日期单元格,"yyyy-mm-dd hh:mm:ss")
 
 # 三.excel 拼接sql
-="update dd_new.veh_device set INSTALL_DATE='"&F2&"',INSTALL_LOCATION='"&G2&"',INSTALL_ADDRESS='"&H2&"',INSTALL_TYPE='"&D2&"',INSTALLER='"&C2&"' where id='"&A2&"'"
+="update 表名 set 字段名='"&所需要的值（5） &"' where 字段名='"& B2 &"';"
